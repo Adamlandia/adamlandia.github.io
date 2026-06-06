@@ -130,7 +130,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="https://formspree.io/f/maqzqbrd">
+								<form method="post" action="https://formspree.io/f/maqzqbrd" id="contact-form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -142,7 +142,7 @@
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"> required> </textarea>
+											<textarea name="message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -200,6 +200,23 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+            var form = document.getElementById('contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                }).then(function(response) {
+                    if (response.ok) {
+                        alert('Message sent successfully!');
+                        form.reset();
+                    } else {
+                        alert('Oops! Something went wrong. Please try again.');
+                    }
+                });
+            });
+        </script>
 	</body>
 </html>
