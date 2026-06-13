@@ -41,7 +41,7 @@
 								<h1>Microsoft Intune</h1>
 							</header>
 							<div class="content">
-								<p>A full transition from on-premises SCCM-based device management to a cloud-native Microsoft Intune environment — covering device enrollment, security policy deployment, application management, and BYOD across Windows, iOS, and Android platforms.</p>
+								<p>A collection of device management, security, and application projects delivered through Microsoft Intune — covering endpoint enrollment, local admin security, compliance policy deployment, application management, and BYOD across Windows, iOS, and Android.</p>
 							</div>
 						</div>
 					</section>
@@ -53,9 +53,9 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>From SCCM to Cloud-Native Device Management</h2>
+										<h2>Endpoint Management with Microsoft Intune</h2>
 									</header>
-									<p>Prior to this initiative, the organization's devices were domain joined with minimal GPO configuration and managed through SCCM. There was no centralized cloud-based management, no mobile device management for personal devices, and limited visibility into device compliance and security posture. I led the transition to Microsoft Intune, enrolling 120+ Windows devices using a cloud-native Entra joined approach — preserving all existing data and applications through an in-place enrollment method that required no device wipe or reimaging. SCCM was subsequently decommissioned as Intune became the sole management platform.</p>
+									<p>Over the course of my time managing the organization's device fleet, I configured, tested, and deployed a wide range of solutions through Microsoft Intune covering 200+ Windows devices alongside iOS and Android personal devices. The projects below represent key initiatives that improved security, reduced IT overhead, and standardized device management across the organization.</p>
 								</div>
 							</section>
 
@@ -70,7 +70,7 @@
 											<header class="major">
 												<h3>Device Enrollment & Autopilot</h3>
 											</header>
-											<p>Enrolled 120+ Windows devices into Intune using a cloud-native Entra joined approach without requiring devices to go through OOBE or be wiped. This in-place enrollment method preserved all user data and applications, saving significant time and avoiding disruption to day-to-day operations. Devices were configured for Windows Autopilot, enabling zero-touch provisioning for any new or reset devices going forward. Internal documentation and a runbook were created to standardize the process for future IT use.</p>
+											<p>Enrolled 200+ Windows devices into Intune using a cloud-native Entra joined approach without requiring devices to be reimaged. This in-place enrollment method preserved all user data and applications, saving significant time and avoiding disruption to day-to-day operations. Devices were configured for Windows Autopilot, enabling zero-touch provisioning for any new or reset devices going forward. Internal documentation and a runbook were created to standardize the process for future IT use.</p>
 										</div>
 									</div>
 								</section>
@@ -83,7 +83,7 @@
 											<header class="major">
 												<h3>LAPS & Local Admin Management</h3>
 											</header>
-											<p>Prior to LAPS being configured, the organization had no local admin accounts properly set up on devices, leaving the default Windows Administrator account as a potential backdoor — even when disabled. I configured LAPS (Local Admin Password Solution) through Intune for all cloud-joined devices, rotating the local admin password daily and storing it securely in Entra ID. This solved a real operational problem: when users needed elevated access for approved tasks, IT could provide the daily LAPS password through the RMM, temporarily enabling the Administrator account for the workday only. This also proved critical in time-sensitive situations where users had performed unauthorized SSD swaps or device resets and ended up going through Autopilot enrollment without the RMM installed — LAPS credentials allowed IT to remotely recover and re-provision those devices efficiently.</p>
+											<p>Prior to LAPS being configured, the organization had locally created admin account with a seasonally rotating password set up on all devices, leaving those and the default Windows Administrator account as a potential backdoor. I configured LAPS (Local Admin Password Solution) through Intune for all cloud-joined devices, rotating the local admin password frequently and storing it securely in Entra ID. This solved a real operational problem: when users needed elevated access for approved tasks, IT could provide the LAPS password through the RMM, temporarily enabling the Administrator account for the workday only. This also proved critical in time-sensitive situations where users had performed unauthorized SSD swaps or device resets and ended up going through Autopilot enrollment without the RMM installed.</p>
 										</div>
 									</div>
 								</section>
@@ -96,7 +96,7 @@
 											<header class="major">
 												<h3>Security & Compliance Policies</h3>
 											</header>
-											<p>Configured, tested, and deployed a suite of security and compliance policies across the entire Windows device fleet through Intune. This included BIOS admin password policies to prevent unauthorized hardware-level changes, baseline compliance policies to enforce minimum security standards, and conditional access policies tied to Entra ID to ensure only compliant devices could access company resources. Policies were validated in a test environment before being pushed to production to minimize risk of disruption.</p>
+											<p>Configured, tested, and deployed a suite of security and compliance policies across the entire Windows device fleet through Intune. This included baseline compliance policies to enforce minimum security standards and conditional access policies tied to Entra ID to ensure only compliant devices could access company resources. Policies were validated in a test environment before being pushed to production to minimize risk of disruption.</p>
 										</div>
 									</div>
 								</section>
@@ -109,7 +109,7 @@
 											<header class="major">
 												<h3>BYOD & Application Deployment</h3>
 											</header>
-											<p>Designed and deployed app protection and compliance policies for iOS and Android personal devices through a canary rollout — launching first with select departments to gather live feedback and identify issues before expanding company wide. Policies were configured to protect company data on personal devices without requiring full device enrollment, striking a balance between security and user privacy. On the Windows side, core business applications including UniFLOW, ITSPlatform, and EA 25 were packaged and deployed silently through Intune, eliminating the need for manual installation and reducing helpdesk overhead for application requests.</p>
+											<p>Designed and deployed app protection and compliance policies for iOS and Android personal devices through a canary rollout — launching first with select departments to gather live feedback and identify issues before expanding company wide. Policies were configured to protect company data on personal devices without requiring full device enrollment, offering a balance between security and user privacy. On the Windows side, core business applications including UniFLOW, ITSPlatform, and E-Automate were packaged and deployed silently through Intune, eliminating the need for manual installation and reducing IT overhead for application requests.</p>
 										</div>
 									</div>
 								</section>
@@ -121,7 +121,7 @@
 									<header class="major">
 										<h2>Outcomes & Technologies</h2>
 									</header>
-									<p>The transition from SCCM to Intune delivered measurable improvements across security, operations, and cost. 120+ devices were enrolled cloud-natively without data loss, SCCM was decommissioned reducing licensing overhead, and the organization gained full visibility into device compliance for the first time. LAPS eliminated a long-standing local admin security gap. BYOD policies secured company data on personal devices without sacrificing user experience. Silent application deployments reduced helpdesk tickets and standardized the software environment across the fleet.</p>
+									<p>The transition from SCCM to Intune delivered measurable improvements across security, operations, and cost. 200+ devices were enrolled cloud-natively without data loss, SCCM was decommissioned reducing licensing overhead, and the organization gained full visibility into device compliance for the first time. LAPS eliminated a long-standing local admin security gap. BYOD policies secured company data on personal devices without sacrificing user experience. Silent application deployments reduced IT tickets and standardized the software environment across the fleet.</p>
 									<p><strong>Technologies Used:</strong> Microsoft Intune &bull; Microsoft Entra ID &bull; Windows Autopilot &bull; LAPS &bull; Conditional Access &bull; App Protection Policies &bull; SCCM &bull; PowerShell &bull; iOS &bull; Android &bull; Windows 10/11</p>
 									<ul class="actions">
 										<li><a href="index.html" class="button next">Back to Portfolio</a></li>
