@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Adam Martien | Projects</title>
+		<title>Adam Martien | PowerShell</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,7 +14,6 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
 						<a href="index.html" class="logo"><strong>Adam</strong> <span>Landia</span></a>
 						<nav>
@@ -26,28 +25,23 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							<li><a href="index.html" class="button primary fit">Back to Portfolio</a></li>
 						</ul>
 					</nav>
 
 				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>PowerShell Automation</h1>
 							</header>
 							<div class="content">
-								<p>https://youtu.be/QDia3e12czc?si=W2vDwZqP8f2CJpZQ</p>
+								<p>A collection of PowerShell scripts built to automate the full employee lifecycle, maintain a healthy and secure Microsoft 365 tenant, and resolve business-critical application issues during cloud migrations.</p>
 							</div>
 						</div>
 					</section>
@@ -59,59 +53,63 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2>Automating IT Operations with PowerShell</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>Throughout my role, I built and maintained a library of PowerShell scripts leveraging Microsoft Graph, Exchange Online, and SharePoint Online to automate repetitive administrative tasks, enforce consistency, and provide centralized tracking and reporting. These scripts span the full employee lifecycle from onboarding through offboarding, ongoing tenant maintenance, and application-specific fixes during major infrastructure changes.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic08.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Orci maecenas</h3>
+												<h3>Centralized User Onboarding</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Built an interactive PowerShell tool using Microsoft Graph to standardize and centralize new employee onboarding. The script presents a menu-driven workflow that creates the user account in Entra ID, sets profile attributes (job title, department, office, employee type, hire date), assigns a manager, and checks tenant license availability before assigning licenses such as Microsoft 365 E3 or Business Premium &mdash; preventing failed assignments from oversubscribed SKUs. The tool also supports running each step independently (create user only, update profile only, assign manager only, assign licenses only), giving IT flexibility for partial onboarding or corrections without re-running the entire process.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic09.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rhoncus magna</h3>
+												<h3>Centralized Offboarding & Tracking</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Designed an offboarding script to solve a real gap &mdash; the company had no centralized record of departed employees. The script uses Microsoft Graph to disable the user's account and revoke active sign-in sessions, automatically resolves and delegates the user's mailbox to their manager with full access via Exchange Online, converts the mailbox to a shared mailbox to preserve historical email without consuming a license, and logs the entire offboarding event &mdash; including employee name, title, manager, hire date, and offboard date &mdash; to a SharePoint list via PnP PowerShell. This created a single source of truth for every departed employee going forward.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Sed nunc ligula</h3>
+												<h3>Weekly Tenant Health Reporting</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Created a reporting script that queries Microsoft Graph and Exchange Online to identify users who haven't signed in within a configurable threshold (default 15 days), filters results to relevant company accounts, and exports the findings to CSV and Excel. This script runs automatically every Friday via a Power Automate trigger, giving IT a recurring reminder to follow up with managers on inactive accounts and decide whether they should be removed &mdash; keeping the tenant clean and reducing unnecessary license spend. A companion script scans for non-compliant iOS and Windows devices and compiles the results into a CSV that's emailed directly to IT for follow-up.</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/pic11.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>ERP Connection Fix at Scale</h3>
+											</header>
+											<p>When the on-premises ERP system was migrated to the cloud, the SQL server every workstation connected to changed entirely &mdash; a problem that would have taken an enormous amount of time to fix manually, one user at a time. I wrote a script that locates the correct registry path for the currently logged-in user, identifies the existing connection profile, and updates the registry values to point to the new cloud-hosted SQL server automatically. The script was deployed at scale through the company's RMM tool to ensure it reliably reached every affected device, allowing users to continue working with zero interruption or manual reconfiguration after the migration.</p>
 										</div>
 									</div>
 								</section>
@@ -121,11 +119,12 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h2>Outcomes & Technologies</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<p>These scripts replaced manual, error-prone processes with consistent, repeatable automation across the employee lifecycle and tenant maintenance. Onboarding and offboarding became centralized and fully logged for the first time, giving the company an accurate record of every account created and decommissioned. Weekly automated reporting keeps the Microsoft 365 tenant clean and reduces unnecessary licensing costs. The ERP connection fix prevented what could have been days of manual, one-by-one troubleshooting during a critical cloud migration, ensuring zero disruption for end users.</p>
+									<p><strong>Technologies Used:</strong> PowerShell &bull; Microsoft Graph PowerShell SDK &bull; Exchange Online Management &bull; PnP PowerShell &bull; SharePoint Online &bull; Power Automate &bull; ImportExcel Module &bull; Windows Registry &bull; RMM</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
+										<li><a href="index.html" class="button next">Back to Portfolio</a></li>
 									</ul>
 								</div>
 							</section>
@@ -136,19 +135,19 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/maqzqbrd" id="contact-form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name="message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -162,7 +161,7 @@
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">amartien493@gmail.com</a>
+										<a href="mailto:amartien493@gmail.com">amartien493@gmail.com</a>
 									</div>
 								</section>
 								<section>
@@ -188,10 +187,10 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-    							<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Adam Martien</li>
 							</ul>
 						</div>
 					</footer>
@@ -206,6 +205,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var form = document.getElementById('contact-form');
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+					fetch(form.action, {
+						method: 'POST',
+						body: new FormData(form),
+						headers: { 'Accept': 'application/json' }
+					}).then(function(response) {
+						if (response.ok) {
+							alert('Message sent successfully!');
+							form.reset();
+						} else {
+							alert('Oops! Something went wrong. Please try again.');
+						}
+					});
+				});
+			</script>
 
 	</body>
 </html>
