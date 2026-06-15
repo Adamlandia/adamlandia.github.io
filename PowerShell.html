@@ -96,20 +96,20 @@
 											<header class="major">
 												<h3>Weekly Tenant Health Reporting</h3>
 											</header>
-											<p>Created a reporting script that queries Microsoft Graph and Exchange Online to identify users who haven't signed in within a configurable threshold (default 15 days), filters results to relevant company accounts, and exports the findings to CSV and Excel. This script runs automatically every Friday via a Power Automate trigger, giving IT a recurring reminder to follow up with managers on inactive accounts and decide whether they should be removed &mdash; keeping the tenant clean and reducing unnecessary license spend. A companion script scans for non-compliant iOS and Windows devices and compiles the results into a CSV that's emailed directly to IT for follow-up.</p>
+											<p>Created a reporting script that queries Microsoft Graph and Exchange Online to identify users who haven't signed in within a configurable threshold (30 days), filters results to relevant company accounts, and exports the findings to CSV. This script runs automatically every Friday via a Power Automate trigger, giving IT a recurring reminder to follow up with managers on inactive accounts and decide whether they should be removed &mdash; keeping the tenant clean and reducing unnecessary license spend for offboarded accounts with licenses retained. A companion script scans for non-compliant iOS and Windows devices and compiles the results into a CSV that's emailed directly to IT for follow-up.</p>
 										</div>
 									</div>
 								</section>
 								<section>
 									<a class="image">
-										<img src="images/pic11.jpg" alt="" data-position="center center" />
+										<img src="images/pic09.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
 												<h3>ERP Connection Fix at Scale</h3>
 											</header>
-											<p>When the on-premises ERP system was migrated to the cloud, the SQL server every workstation connected to changed entirely &mdash; a problem that would have taken an enormous amount of time to fix manually, one user at a time. I wrote a script that locates the correct registry path for the currently logged-in user, identifies the existing connection profile, and updates the registry values to point to the new cloud-hosted SQL server automatically. The script was deployed at scale through the company's RMM tool to ensure it reliably reached every affected device, allowing users to continue working with zero interruption or manual reconfiguration after the migration.</p>
+											<p>When the on-premises ERP system was migrated to the cloud, the SQL server every workstation connected to changed entirely &mdash; a problem that would have taken an unnecessary amount of time to fix manually, one user at a time. I wrote a script that locates the correct registry path for the currently logged-in user, identifies the existing connection profile, and updates the registry values to point to the new cloud-hosted SQL server. The script was deployed at scale through the company's RMM tool to ensure it reliably reached every affected device, allowing users to continue working with zero interruption or manual reconfiguration after the migration.</p>
 										</div>
 									</div>
 								</section>
@@ -122,7 +122,7 @@
 										<h2>Outcomes & Technologies</h2>
 									</header>
 									<p>These scripts replaced manual, error-prone processes with consistent, repeatable automation across the employee lifecycle and tenant maintenance. Onboarding and offboarding became centralized and fully logged for the first time, giving the company an accurate record of every account created and decommissioned. Weekly automated reporting keeps the Microsoft 365 tenant clean and reduces unnecessary licensing costs. The ERP connection fix prevented what could have been days of manual, one-by-one troubleshooting during a critical cloud migration, ensuring zero disruption for end users.</p>
-									<p><strong>Technologies Used:</strong> PowerShell &bull; Microsoft Graph PowerShell SDK &bull; Exchange Online Management &bull; PnP PowerShell &bull; SharePoint Online &bull; Power Automate &bull; ImportExcel Module &bull; Windows Registry &bull; RMM</p>
+									<p><strong>Technologies Used:</strong> PowerShell &bull; Microsoft Graph PowerShell SDK &bull; Exchange Online Management &bull; PnP PowerShell &bull; SharePoint Online &bull; Power Automate &bull; ImportExcel Module &bull; Windows Registry &bull; ScreenConnect</p>
 									<ul class="actions">
 										<li><a href="index.html" class="button next">Back to Portfolio</a></li>
 									</ul>
