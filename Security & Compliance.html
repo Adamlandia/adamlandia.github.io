@@ -41,7 +41,7 @@
 								<h1>Security & Compliance</h1>
 							</header>
 							<div class="content">
-								<p>A collection of independently owned security initiatives spanning identity protection, mobile application management, email security, and tenant monitoring &mdash; all designed to harden the organization's Microsoft 365 environment and reduce its attack surface.</p>
+								<p>A collection of independently lead security initiatives spanning identity protection, mobile application management, email security, and tenant monitoring &mdash; all designed to harden the organization's Microsoft 365 environment and reduce its attack surface.</p>
 							</div>
 						</div>
 					</section>
@@ -55,7 +55,7 @@
 									<header class="major">
 										<h2>Hardening a Microsoft 365 Environment</h2>
 									</header>
-									<p>When I joined the organization, users had no authenticator app configured and were relying solely on SMS-based authentication &mdash; one of the weakest forms of MFA available and easily bypassed through SIM swapping or SS7 attacks. Over the following months I independently designed and deployed a layered security strategy covering identity, device compliance, mobile app protection, email security, and continuous tenant monitoring to bring the environment in line with modern security standards.</p>
+									<p>Over the course of my time in this role I independently designed and deployed a layered security strategy covering identity, device compliance, mobile app protection, email security, and continuous tenant monitoring. Users were authenticating via SMS with no authenticator app in place, mobile devices had no data protection policies, and group membership changes in Entra went completely undetected. As part of the user account conversions to the cloud, I rolled out Microsoft Authenticator across all users in the organization, replacing SMS authentication in the process. Each project below represents a deliberate step toward closing those gaps and bringing the organization in line with modern security standards.</p>
 								</div>
 							</section>
 
@@ -70,7 +70,7 @@
 											<header class="major">
 												<h3>Conditional Access & MFA Enforcement</h3>
 											</header>
-											<p>Designed and deployed Conditional Access policies through Entra ID to enforce MFA via Microsoft Authenticator as a broker, replacing the existing SMS-based authentication entirely. Policies were scoped to require app protection compliance on BYOD devices while routing corporate-managed devices through device compliance policies instead &mdash; ensuring the right controls applied to the right device context without over-restricting end users. Device filters were configured to exclude corporate MDM-enrolled devices from MAM enforcement, preventing policy conflicts between managed and unmanaged device flows.</p>
+											<p>Configured and deployed Conditional Access policies through Entra ID to enforce MFA via Microsoft Authenticator as a broker, which had been rolled out across all accounts as part of the broader cloud migration. Policies were scoped to separate corporate and personal device flows &mdash; BYOD devices are required to comply with App Protection Policies to access company resources, while Windows devices must meet a compliance policy baseline enforced through Intune before access is granted. Device filters were used to ensure the correct protection policy applied to each device context without conflict.</p>
 										</div>
 									</div>
 								</section>
@@ -102,7 +102,7 @@
 								</section>
 								<section>
 									<a class="image">
-										<img src="images/pic11.jpg" alt="" data-position="center center" />
+										<img src="images/pic09.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
