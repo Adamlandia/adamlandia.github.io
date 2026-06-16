@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Adam Martien | Projects</title>
+		<title>Adam Martien | Power Platform</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,7 +14,6 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
 						<a href="index.html" class="logo"><strong>Adam</strong> <span>Landia</span></a>
 						<nav>
@@ -26,28 +25,23 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							<li><a href="index.html" class="button primary fit">Back to Portfolio</a></li>
 						</ul>
 					</nav>
 
 				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>Power Platform Development</h1>
 							</header>
 							<div class="content">
-								<p>https://youtu.be/QDia3e12czc?si=W2vDwZqP8f2CJpZQ</p>
+								<p>A set of Power Automate flows and Power Apps built to solve real operational problems &mdash; from securely transferring files around a zero-trust firewall, to giving non-technical users a proper way to submit IT tickets, to automated compliance reporting built with future remediation in mind.</p>
 							</div>
 						</div>
 					</section>
@@ -59,59 +53,63 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2>Solving Real Problems with Low-Code Automation</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>Each of the projects below started as a specific operational pain point rather than a generic automation exercise. I designed and built these flows end to end &mdash; from the SharePoint backend structure to the Power Automate logic to, in some cases, a Power App front end &mdash; using JotForm, SharePoint, Outlook, and Microsoft Graph as the primary integration points.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic08.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Orci maecenas</h3>
+												<h3>Secure File Transfer Around a Zero-Trust Firewall</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Printer backup files in .dcm and .abk formats were consistently being blocked by the firewall, and a zero-trust policy meant whitelisting by file type wasn't an option. I built a two-flow system to solve this: a technician fills out a Preflight Form with the order number and client email, which automatically creates a dedicated SharePoint folder for that order and generates a secure upload link. The link itself encodes the order number, recipient, and a 14-day expiration directly into a Base64-encoded string &mdash; nothing is exposed to the client, and the link self-expires without needing a database lookup. The client receives a simple one-button upload form by email, and when they submit a file, the second flow decodes the embedded parameters, validates the expiration, and routes the file into the correct SharePoint folder automatically. This eliminated firewall blocks entirely, gave technicians a centralized, organized history of every order's files, and significantly improved the client experience.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic09.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rhoncus magna</h3>
+												<h3>Self-Service IT Ticketing for Non-Technical Users</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p><p>Before this system, users without strong technical comfort would often walk up to IT directly rather than email, which created constant interruptions and made it harder to properly triage and document issues. I built a Power App ticketing form &mdash; deployed as a bookmarked link through Intune &mdash; with just three simple inputs: an issue type dropdown, a short description field, and an attachment option for screenshots. Submissions are logged directly to a SharePoint list, and a second flow picks up each new item, compiles the details, and sends a properly formatted email to IT on the user's behalf. This gave less technical users a guided, low-friction way to submit issues, preserved proper ticket documentation and chain of communication, and served as a reliable fallback even when a user's email access was down. The issue type dropdown was also designed with scalability in mind &mdash; specific categories could be configured to trigger an automated response with a self-service guide for common issues like restarting a computer or clearing a printer queue, reducing ticket volume for IT on routine requests before a technician ever needs to get involved.</p></p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Sed nunc ligula</h3>
+												<h3>Automated Non-Compliant Device Reporting</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Built two parallel flows that query Microsoft Graph weekly for non-compliant Windows and iOS devices enrolled in Intune. Each flow compiles the results &mdash; including serial number, last check-in time, and the associated user principal name &mdash; into a CSV report and emails it directly to IT. The flows were intentionally designed to be extended further, with the underlying structure able to support automated remediation actions such as triggering a remote Intune sync on the affected device or notifying the device owner's manager directly, rather than relying purely on manual IT follow-up.</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/pic09.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Entra Group Drift Monitoring</h3>
+											</header>
+											<p>A weekly flow that reads all Entra ID groups, compares the current state against a stored baseline in SharePoint, and logs any additions, deletions, or modifications. When changes are detected, an email summarizing exactly what changed is sent to IT, and the baseline is automatically updated to reflect the new state for the next comparison. This closed a visibility gap where group membership changes &mdash; potentially indicating unauthorized access or misconfiguration &mdash; previously went completely undetected.</p>
 										</div>
 									</div>
 								</section>
@@ -121,11 +119,12 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h2>Outcomes & Technologies</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<p>These flows collectively removed manual bottlenecks across file handling, ticketing, and compliance monitoring. The secure file transfer system eliminated recurring firewall issues without compromising the organization's zero-trust posture. The ticketing system reduced unscheduled IT interruptions while improving documentation quality. The compliance reporting flows gave IT a reliable, automated pulse on device health with a clear path toward future automated remediation, and the Entra monitoring flow closed a long-standing blind spot in group governance.</p>
+									<p><strong>Technologies Used:</strong> Power Automate &bull; Power Apps &bull; Microsoft Graph &bull; SharePoint Online &bull; JotForm &bull; Outlook/Office 365 &bull; Microsoft Intune &bull; Base64 Encoding &bull; Entra ID</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
+										<li><a href="index.html" class="button next">Back to Portfolio</a></li>
 									</ul>
 								</div>
 							</section>
@@ -136,19 +135,19 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/maqzqbrd" id="contact-form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name="message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -162,7 +161,7 @@
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">amartien493@gmail.com</a>
+										<a href="mailto:amartien493@gmail.com">amartien493@gmail.com</a>
 									</div>
 								</section>
 								<section>
@@ -188,10 +187,10 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-    							<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Adam Martien</li>
 							</ul>
 						</div>
 					</footer>
@@ -206,6 +205,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var form = document.getElementById('contact-form');
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+					fetch(form.action, {
+						method: 'POST',
+						body: new FormData(form),
+						headers: { 'Accept': 'application/json' }
+					}).then(function(response) {
+						if (response.ok) {
+							alert('Message sent successfully!');
+							form.reset();
+						} else {
+							alert('Oops! Something went wrong. Please try again.');
+						}
+					});
+				});
+			</script>
 
 	</body>
 </html>
