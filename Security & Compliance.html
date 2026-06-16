@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Adam Martien | Projects</title>
+		<title>Adam Martien | Security & Compliance</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,7 +14,6 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-				<!-- Note: The "styleN" class below should match that of the banner element. -->
 					<header id="header" class="alt style2">
 						<a href="index.html" class="logo"><strong>Adam</strong> <span>Landia</span></a>
 						<nav>
@@ -26,28 +25,23 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
 						</ul>
 						<ul class="actions stacked">
-							<li><a href="#" class="button primary fit">Get Started</a></li>
-							<li><a href="#" class="button fit">Log In</a></li>
+							<li><a href="index.html" class="button primary fit">Back to Portfolio</a></li>
 						</ul>
 					</nav>
 
 				<!-- Banner -->
-				<!-- Note: The "styleN" class below should match that of the header element. -->
 					<section id="banner" class="style2">
 						<div class="inner">
 							<span class="image">
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>Landing</h1>
+								<h1>Security & Compliance</h1>
 							</header>
 							<div class="content">
-								<p>https://youtu.be/QDia3e12czc?si=W2vDwZqP8f2CJpZQ</p>
+								<p>A collection of independently owned security initiatives spanning identity protection, mobile application management, email security, and tenant monitoring &mdash; all designed to harden the organization's Microsoft 365 environment and reduce its attack surface.</p>
 							</div>
 						</div>
 					</section>
@@ -59,59 +53,63 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h2>Sed amet aliquam</h2>
+										<h2>Hardening a Microsoft 365 Environment</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+									<p>When I joined the organization, users had no authenticator app configured and were relying solely on SMS-based authentication &mdash; one of the weakest forms of MFA available and easily bypassed through SIM swapping or SS7 attacks. Over the following months I independently designed and deployed a layered security strategy covering identity, device compliance, mobile app protection, email security, and continuous tenant monitoring to bring the environment in line with modern security standards.</p>
 								</div>
 							</section>
 
 						<!-- Two -->
 							<section id="two" class="spotlights">
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic08.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Orci maecenas</h3>
+												<h3>Conditional Access & MFA Enforcement</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Designed and deployed Conditional Access policies through Entra ID to enforce MFA via Microsoft Authenticator as a broker, replacing the existing SMS-based authentication entirely. Policies were scoped to require app protection compliance on BYOD devices while routing corporate-managed devices through device compliance policies instead &mdash; ensuring the right controls applied to the right device context without over-restricting end users. Device filters were configured to exclude corporate MDM-enrolled devices from MAM enforcement, preventing policy conflicts between managed and unmanaged device flows.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic09.jpg" alt="" data-position="top center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Rhoncus magna</h3>
+												<h3>Mobile Application Management (MAM) Architecture</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Built a full MAM architecture to protect corporate data on personal iOS devices without requiring full device enrollment. Enrollment restrictions were configured to block personal devices from enrolling into Intune while allowing corporate devices to enroll via Apple Business Manager (ADE). Two-tiered App Protection Policies were deployed &mdash; Level 1 for managed corporate devices with relaxed controls, and Level 2 for BYOD devices enforcing strict data transfer restrictions and encryption. Assignment filters were used to differentiate policy enforcement based on device management state, ensuring only one APP policy applied per device context. App Configuration Policies were also deployed to reinforce app identity and ensure correct MAM policy assignment through Intune MAM UPN and OID keys.</p>
 										</div>
 									</div>
 								</section>
 								<section>
-									<a href="generic.html" class="image">
+									<a class="image">
 										<img src="images/pic10.jpg" alt="" data-position="25% 25%" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Sed nunc ligula</h3>
+												<h3>Mimecast SSO via SAML 2.0</h3>
 											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
+											<p>Configured Single Sign-On for Mimecast through Entra ID using SAML 2.0, setting up Mimecast as an Enterprise Application in the Azure portal and establishing the trust relationship between the identity provider and service provider. Prior to this, users were managing a separate set of Mimecast credentials entirely. After SSO was enabled, users authenticate to Mimecast through their Entra ID identity, eliminating credential sprawl, reducing the risk of weak or reused passwords on the email security platform, and removing IT overhead associated with Mimecast password resets.</p>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a class="image">
+										<img src="images/pic11.jpg" alt="" data-position="center center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3>Entra Group Change Monitoring</h3>
+											</header>
+											<p>Built an automated monitoring solution using Power Automate that runs weekly to detect any changes to Entra ID groups &mdash; including additions, deletions, and modifications. The flow establishes a baseline snapshot of all groups on first run, then compares the current state against that baseline every Friday. Any detected changes are logged and an alert email is sent to IT summarizing exactly what changed. The baseline is then updated automatically to reflect the new state, ensuring the next comparison is always accurate. This gives the team visibility into group membership drift that could indicate unauthorized access changes or misconfiguration &mdash; something that previously went completely undetected.</p>
 										</div>
 									</div>
 								</section>
@@ -121,11 +119,12 @@
 							<section id="three">
 								<div class="inner">
 									<header class="major">
-										<h2>Massa libero</h2>
+										<h2>Outcomes & Technologies</h2>
 									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+									<p>These initiatives collectively transformed the organization's security posture from a baseline of SMS-only MFA and no mobile data protection to a layered, identity-driven security model. Microsoft Authenticator replaced SMS across all accounts, BYOD devices are now protected through MAM without sacrificing user experience, Mimecast is secured through SSO eliminating a separate credential surface, and Entra group changes are now monitored continuously with automated alerting &mdash; closing a visibility gap that had existed since the tenant was created.</p>
+									<p><strong>Technologies Used:</strong> Microsoft Entra ID &bull; Conditional Access &bull; Microsoft Authenticator &bull; Microsoft Intune MAM &bull; App Protection Policies &bull; Apple Business Manager (ADE) &bull; SAML 2.0 &bull; Mimecast &bull; Power Automate &bull; SharePoint Online &bull; Microsoft Graph</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
+										<li><a href="index.html" class="button next">Back to Portfolio</a></li>
 									</ul>
 								</div>
 							</section>
@@ -136,19 +135,19 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="https://formspree.io/f/maqzqbrd" id="contact-form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
+											<input type="text" name="name" id="name" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
+											<input type="email" name="email" id="email" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
+											<textarea name="message" id="message" rows="6" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -162,7 +161,7 @@
 									<div class="contact-method">
 										<span class="icon solid alt fa-envelope"></span>
 										<h3>Email</h3>
-										<a href="#">amartien493@gmail.com</a>
+										<a href="mailto:amartien493@gmail.com">amartien493@gmail.com</a>
 									</div>
 								</section>
 								<section>
@@ -188,10 +187,10 @@
 					<footer id="footer">
 						<div class="inner">
 							<ul class="icons">
-    							<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://www.linkedin.com/in/adam-martien-037341301/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Adam Martien</li>
 							</ul>
 						</div>
 					</footer>
@@ -206,6 +205,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var form = document.getElementById('contact-form');
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+					fetch(form.action, {
+						method: 'POST',
+						body: new FormData(form),
+						headers: { 'Accept': 'application/json' }
+					}).then(function(response) {
+						if (response.ok) {
+							alert('Message sent successfully!');
+							form.reset();
+						} else {
+							alert('Oops! Something went wrong. Please try again.');
+						}
+					});
+				});
+			</script>
 
 	</body>
 </html>
